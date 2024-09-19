@@ -13,12 +13,9 @@ export default {
 </script>
 
 <template>
-    <h2>
-        Sono la lista delle card
-    </h2>
     <AppMainCardsListItem />
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>

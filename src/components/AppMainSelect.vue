@@ -9,10 +9,7 @@ export default {
 </script>
 
 <template>
-    <h2>
-        sono la select
-    </h2>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>

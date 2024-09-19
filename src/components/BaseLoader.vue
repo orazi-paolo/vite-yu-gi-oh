@@ -9,11 +9,8 @@ export default {
 </script>
 
 <template>
-    <h2>
-        sono il loader
-    </h2>
-
+  
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 </style>

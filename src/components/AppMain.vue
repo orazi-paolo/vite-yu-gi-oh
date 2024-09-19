@@ -18,9 +18,6 @@ export default {
 </script>
 
 <template>
-    <h1>
-        sono il main
-    </h1>
     <BaseLoader />
     <AppMainSelect />
     <AppMainCardsList />

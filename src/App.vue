@@ -20,5 +20,8 @@ export default {
 
 <style lang="scss">
 @use "bootstrap/scss/bootstrap";
+body{
+  background-color: #d48f3c;
+}
 
 </style>
