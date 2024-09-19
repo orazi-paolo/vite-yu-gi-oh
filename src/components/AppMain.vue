@@ -6,22 +6,27 @@ import BaseLoader from './BaseLoader.vue';
 export default {
   data() {
     return {
-      
+      hasLoaded: false,
     }
   },
   components: {
     AppMainSelect,
     AppMainCardsList,
     BaseLoader
-  }
+  },
+  methods: {
+    setHasLoaded() {
+      this.hasLoaded = true;
+    }
+  },
 }
 </script>
 
 <template>
   <div class="container">
     <AppMainSelect />
-    <BaseLoader />
-    <AppMainCardsList />
+    <AppMainCardsList @hasLoaded="setHasLoaded" />
+    <BaseLoader v-if="!hasLoaded"/>
   </div>
 </template>
 

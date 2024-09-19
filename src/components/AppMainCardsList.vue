@@ -35,7 +35,11 @@ export default {
     }
   },
   created() {
-    this.getCardsList();
+    setTimeout(() => {
+      this.getCardsList();
+      this.$emit('hasLoaded');
+
+    }, 2000);
   }
 }
 </script>
@@ -45,7 +49,7 @@ export default {
     <div class="bg-black pt-3 pb-3 d-flex align-items-center">
       <p class="results mb-0 ps-3">Found {{ cardsList.length }} cards</p>
     </div>
-    <div class="row row-cols-5">
+    <div class="row row-cols-5 gy-3">
       <AppMainCardsListItem v-for="(card) in cardsList" :key="card.id"
         :title = "card.name"
         :archetype = "card.archetype"
