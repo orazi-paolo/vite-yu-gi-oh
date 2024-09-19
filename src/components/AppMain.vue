@@ -1,5 +1,6 @@
 <script>
 import AppMainSelect from './AppMainSelect.vue';
+import AppMainCardsFound from './AppMainCardsFound.vue';
 import AppMainCardsList from './AppMainCardsList.vue';
 import BaseLoader from './BaseLoader.vue';
 import axios from 'axios';
@@ -16,7 +17,8 @@ export default {
   components: {
     AppMainSelect,
     AppMainCardsList,
-    BaseLoader
+    BaseLoader,
+    AppMainCardsFound
   },
   methods: {
     setHasLoaded() {
@@ -57,8 +59,12 @@ export default {
 <template>
   <div class="container">
     <AppMainSelect @archetype-selected="handleArchetypeChange" />
-    <AppMainCardsList v-if="selectedArchetype && hasLoaded"
-     :cards="cardsList" />
+    <div class="container bg-light p-5">
+      <AppMainCardsFound v-if="selectedArchetype && hasLoaded"
+       :cards="cardsList" />
+      <AppMainCardsList v-if="selectedArchetype && hasLoaded"
+       :cards="cardsList" />
+    </div>
     <BaseLoader v-if="!selectedArchetype || !hasLoaded" />
   </div>
 </template>
