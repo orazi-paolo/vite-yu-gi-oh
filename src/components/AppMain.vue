@@ -18,9 +18,11 @@ export default {
 </script>
 
 <template>
-    <BaseLoader />
+  <div class="container">
     <AppMainSelect />
+    <BaseLoader />
     <AppMainCardsList />
+  </div>
 </template>
 
 <style lang="scss" scoped>

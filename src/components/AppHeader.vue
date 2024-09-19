@@ -14,7 +14,6 @@ export default {
       <img src="../assets/img/Yu-Gi-Oh!_(Logo).jpg" alt="Logo yu-gi-oh">
       <h1>Yu-Gi-Oh Api</h1>
     </div>
-
   </header>
 </template>
 
