@@ -6,6 +6,7 @@ export default {
     }
   },
   methods: {
+    // creo un metodo per gestire il cambio di archetipo e mandare il risultato al padre
     onSelectChange(event){
       this.$emit('archetypeSelected', event.target.value);
     }

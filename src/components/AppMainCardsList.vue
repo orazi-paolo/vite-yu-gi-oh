@@ -4,8 +4,6 @@ import AppMainCardsListItem from './AppMainCardsListItem.vue';
 export default {
   data() {
     return {
-      cardsList: [],
-      apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php',
     }
   },
   components: {
@@ -17,16 +15,12 @@ export default {
       required: true
     }
   },
-  methods: {
-    fetchCardsList() {
-      this.fetchCards(this.selectedArchetype); 
-    }
-  }
 }
 </script>
 
 <template>
     <div class="row row-cols-5 gy-3" v-if="cards.length > 0">
+      <!-- faccio un v-fot per mostrare le carte dell archetipo selezionato e passo gli elementi che servono alle card tramite props -->
       <AppMainCardsListItem v-for="(card) in cards" :key="card.id"
         :title = "card.name"
         :archetype = "card.archetype"
