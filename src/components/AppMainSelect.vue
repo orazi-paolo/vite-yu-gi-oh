@@ -4,16 +4,21 @@ export default {
     return {
       
     }
+  },
+  methods: {
+    onSelectChange(event){
+      this.$emit('archetypeSelected', event.target.value);
+    }
   }
 }
 </script>
 
 <template>
-  <select class="form-select mt-3 mb-3 ms-3" aria-label="Default select example">
-  <option selected>Alien</option>
-  <option value="1">primo tipo</option>
-  <option value="2">secondo tipo</option>
-  <option value="3">terzo tipo</option>
+  <select class="form-select mt-3 mb-3 ms-3" @change="onSelectChange($event)">
+  <option selected>Select an archetype</option>
+  <option value="Dark Magician">Dark Magician</option>
+  <option value="Prank-Kids">Prank-Kids</option>
+  <option value="Blue-Eyes">Blue-Eyes</option>
 </select>
 </template>
 
